@@ -4,9 +4,19 @@ import * as Font from 'expo-font';
 import React, { useState } from 'react';
 import { Platform, StatusBar, StyleSheet, View } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
-
+import * as firebase from "firebase";
 import AppNavigator from './navigation/AppNavigator';
-
+const firebaseConfig = {
+  apiKey: "AIzaSyCt4w4Bn8k6W6csQ6dl6yUIvmCv7Fd-YdQ",
+  authDomain: "roomme-f01bf.firebaseapp.com",
+  databaseURL: "https://roomme-f01bf.firebaseio.com",
+  projectId: "roomme-f01bf",
+  storageBucket: "roomme-f01bf.appspot.com",
+  messagingSenderId: "1081713952055",
+  appId: "1:1081713952055:web:07fe7a311052f0918dc6b2"
+};
+// Initialize Firebase
+firebase.initializeApp(firebaseConfig);
 export default function App(props) {
   const [isLoadingComplete, setLoadingComplete] = useState(false);
 
